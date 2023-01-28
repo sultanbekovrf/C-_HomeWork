@@ -1,12 +1,16 @@
 ﻿// Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет
-Console.Write("Введите любое число: ");
+Console.Write("Введите любое число, больше 99 : ");
 int number = Convert.ToInt32(Console.ReadLine());
-string numberText = Convert.ToString(number);
-if (numberText.Length > 2)
+
+if (number < 100)
 {
-    Console.WriteLine("Третья цифра: " + numberText[2]);
+    Console.Write("Третьей цифры нет, введите число больше 99: ");
 }
 else
 {
-    Console.WriteLine("Третьей цифры нет");
+    while (number >= 1000)
+    {
+        number = number / 10;
+    }
+        Console.WriteLine("Третья цифра: " + number % 10);
 }
