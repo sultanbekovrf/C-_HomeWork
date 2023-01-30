@@ -14,5 +14,5 @@ else
     int C = number / 10 % 10;
     int D = number % 10;
     if ( A > D || A < D || B > C || B < C ) Console.WriteLine("Введенное число не является палиндромом");
-    if ( A ==D || D ==C ) Console.WriteLine("Введенное число является палиндромом");
+    if ( A ==D && D ==C ) Console.WriteLine("Введенное число является палиндромом");
 }
